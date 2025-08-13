@@ -14,14 +14,25 @@ var calculo3 = salario * 0.275m;
 if (salario <= 2259.20m)
     Console.WriteLine("Isento");
 else if (salario >= 2259.20m && salario <= 2826.65m)
-    Console.WriteLine($"Terá que pagar a aliquota de 7,5% que é {calculo}");
+{
+    Console.WriteLine($"Terá que pagar a aliquota de 7,5% que é {calculo} que será descontado");
+    Console.WriteLine($"Seu salario liquido é de {salario - calculo} kwanzas");
+}
 else if (salario >= 2826.65m && salario <= 3751.05m)
+{
     Console.WriteLine($"Terá que pagar a aliquota de 15% que é {calculo1}");
+    Console.WriteLine($"Seu salario liquido é de {salario - calculo1} kwanzas");
+}
 else if (salario >= 2751.05m && salario <= 4664.68m)
+{
     Console.WriteLine($"Terá que pagar a aliquota de 22,5% que é {calculo2}");
+    Console.WriteLine($"Seu salario liquido é de {salario - calculo2} kwanzas");
+}
 else
+{
     Console.WriteLine($"Terá que pagar a aliquota de 27,5% que é {calculo3}");
-
+    Console.WriteLine($"Seu salario liquido é de {salario - calculo3} kwanzas");
+}
 
 
 
