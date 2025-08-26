@@ -49,19 +49,50 @@ catch (Exception e)
 */
 
 using ConceitosBasicos.uteis;
+int escolher;
+do
+{
+    Console.WriteLine("[0] Para sair");
+    Console.WriteLine("[1] para somar dois numeros");
+    Console.WriteLine("[2] para converter metros para milimetros");
+    Console.WriteLine("[3] para calculo de aumento do percentual");
+    Console.Write("Escolha uma opção: ");
+    escolher = int.Parse(Console.ReadLine());
+    switch (escolher)
+    {
+        case 1:
+            Console.WriteLine("Soma");
+            SomaDoisNumeros somaDoisNumeros = new SomaDoisNumeros();
+            int resultado = somaDoisNumeros.Somar(20, 22);
+            Console.WriteLine(resultado);
+            break;
+        case 2:
+            Console.WriteLine("Converter");
+            int milimetros = MetrosMilimetricos.MetrosToM(8);
+            Console.WriteLine(milimetros);
+            break;
+        case 3:
+            Console.WriteLine("Percentual");
+            CalculaAumento calculaAumento = new CalculaAumento();
+            Console.WriteLine("Informe seu salario: ");
+            decimal salario = decimal.Parse(Console.ReadLine());
+            Console.WriteLine("Informe o percentual de aumento: ");
+            float percentual = float.Parse(Console.ReadLine());
+            decimal percentualAumento = calculaAumento.AumentodoV(salario, percentual);
+            Console.WriteLine($"Você tem {salario:c2} e aumentou {percentual:f1}% que será {percentualAumento}");
+            Console.WriteLine($"Seu novo salario é {salario + percentualAumento}");
+            break;
+        default:
+            Console.WriteLine("Inválido");
+            break;
+    }
+} 
+while (escolher != 0);
 
-SomaDoisNumeros somaDoisNumeros = new SomaDoisNumeros();
-int resultado = somaDoisNumeros.Somar(20, 22);
-Console.WriteLine(resultado);
+
 
 /*
 MetrosMilimetricos metrosMilimetricos = new MetrosMilimetricos();
 int resultado1 = metrosMilimetricos.MetrosToM(8);
 Console.WriteLine(resultado1);
 */
-
-int milimetros = MetrosMilimetricos.MetrosToM(8);
-Console.WriteLine(milimetros);
-
-
-
