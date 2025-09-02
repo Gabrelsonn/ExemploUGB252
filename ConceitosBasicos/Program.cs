@@ -68,7 +68,7 @@ do
             break;
         case 2:
             Console.WriteLine("Converter");
-            int milimetros = MetrosMilimetricos.MetrosToM(8);
+            int milimetros = MetrosMilimetricos.Converter(8);
             Console.WriteLine(milimetros);
             break;
         case 3:

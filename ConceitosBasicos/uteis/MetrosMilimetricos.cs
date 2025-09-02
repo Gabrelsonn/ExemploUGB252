@@ -8,7 +8,7 @@ namespace ConceitosBasicos.uteis
 {
     public class MetrosMilimetricos
     {
-        public static int MetrosToM(int M1)
+        public static int Converter(int M1)
         {
             return M1 * 1000;
         }
